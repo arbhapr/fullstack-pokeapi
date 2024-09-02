@@ -22,11 +22,11 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL} # Pass VITE_API_URL as build argument
     container_name: frontend
     ports:
       - "80:80"
-    environment:
-      - VITE_API_URL=${VITE_API_URL}
     networks:
       - app-network
 
