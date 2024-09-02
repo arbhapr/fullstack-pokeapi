@@ -47,6 +47,7 @@ Before setting up the project, ensure you have the following installed:
    Install Go dependencies:
 
     ```bash
+    cp .env.example .env
     go mod tidy
     ```
 
@@ -61,6 +62,7 @@ Before setting up the project, ensure you have the following installed:
    Install Node.js dependencies:
 
     ```bash
+    cp .env.example .env
     yarn install
     ```
 
@@ -69,13 +71,12 @@ Before setting up the project, ensure you have the following installed:
 1. Navigate to the backend folder:
 
    ```bash
-   cd backend
+   cd ../backend
    ```
 
 2. Start the Go server:
 
    ```bash
-   go mod tidy
    go run main.go
    ```
 
@@ -85,7 +86,7 @@ The backend will run on **http://localhost:3000**.
 1. Navigate to the frontend folder:
 
    ```bash
-   cd frontend
+   cd ../frontend
    ```
 
 2. Start the React development server:
@@ -105,6 +106,7 @@ To run both the backend and frontend using Docker:
 2. Build and start the containers:
 
    ```bash
+   cp .env.example .env
    docker-compose up --build
    ```
 
